@@ -1,80 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator - Assignment 1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <!-- TODO: CHANGE TO EXPRESS -->
-    <link rel="stylesheet" type="text/css" href="../public/css/bmiCalculator.css">
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <nav class="navbar navbar-expand">
-                <h2>BMI Calculator</h2>
-                <div class="navbar-nav ms-auto">
-                     <!-- TODO: CHANGE TO EXPRESS -->
-                    <a class="nav-link fs-4 me-4" href="./home.html">Home</a>
-                    <a class="nav-link fs-4 active" href="#" aria-current="page">Calculator</a>
-                </div>
-            </nav>
-        </div>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- TODO: CHANGE TO EXPRESS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../public/css/bmiCalculator.css"
+    />
+  </head>
+  <body class="mb-5 pb-3">
+    <header class="border-bottom border-dark border-2">
+      <div class="container">
+        <nav class="navbar navbar-expand">
+          <h2>BMI Calculator</h2>
+          <div class="navbar-nav ms-auto">
+            <!-- TODO: CHANGE TO EXPRESS -->
+            <a class="nav-link fs-4 me-4" href="./home.html">Home</a>
+            <a class="nav-link fs-4 active" href="#" aria-current="page">Calculator</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <div class="container">
-            <div class="text-center">
-                <h1 class="display-3 fw-bold my-4">Body Mass Index (BMI) Calculator</h1>
-            </div>
-            <form action="/" method="POST" class="border-main">
-                <div class="mb-2">
-                    <label for="weight" class="form-label fs-4">Weight</label>
-                    <input type="number" class="form-control" id="weight" name="weight" value="0" min="0" oninput="validity.valid||(value='');" required>
-                </div>
-                <div class="mb-2">
-                    <label for="height" class="form-label fs-4">Height</label>
-                    <input type="number" class="form-control" id="height" name="height" value="0" min="0" oninput="validity.valid||(value='');" required>
-                </div>
-                <div class="mb-2 d-flex justify-content-around">
-                    <div class="mb-2">
-                        <label for="age" class="form-label fs-4">Age (From 1)</label>
-                        <input type="number" class="form-control" id="age" name="age" value="1" min="1" oninput="validity.valid||(value='');" required>
-                    </div>
-                    <div class="mb-2">
-                        <p class="form-label fs-4">Gender</p>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="0" checked>
-                            <label class="form-check-label" for="male">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="1">
-                            <label class="form-check-label" for="female">Female</label>
-                        </div>
-                    </div>
-                    <div class="mb-2">
-                        <label for="units" class="form-label fs-4">Units</label>
-                        <select id="units" class="form-select">
-                            <option value="0">Metric</option>
-                            <option value="1">Imperial</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary fw-bold d-block mx-auto btn-lg">Calculate</button>
-            </form>
+      <div class="container">
+        <div class="text-center">
+          <h1 class="display-3 fw-bold my-4">
+            Body Mass Index (BMI) Calculator
+          </h1>
         </div>
+        <form action="/" method="POST" class="border-main">
+          <div class="mb-2">
+            <label for="weight" class="form-label fs-4">Weight</label>
+            <input
+              type="number"
+              class="form-control"
+              id="weight"
+              name="weight"
+              value="0"
+              min="0"
+              oninput="validity.valid||(value='');"
+              required
+            />
+          </div>
+          <div class="mb-2">
+            <label for="height" class="form-label fs-4">Height</label>
+            <input
+              type="number"
+              class="form-control"
+              id="height"
+              name="height"
+              value="0"
+              min="0"
+              oninput="validity.valid||(value='');"
+              required
+            />
+          </div>
+          <div class="mb-2 d-flex justify-content-around">
+            <div class="mb-2">
+              <label for="age" class="form-label fs-4">Age (From 2)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="age"
+                name="age"
+                value="2"
+                min="2"
+                oninput="validity.valid||(value='');"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <p class="form-label fs-4">Gender</p>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="male"
+                  value="0"
+                  checked
+                />
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="female"
+                  value="1"
+                />
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+            </div>
+            <div class="mb-2">
+              <label for="units" class="form-label fs-4">Units</label>
+              <select id="units" class="form-select">
+                <option value="0">Metric</option>
+                <option value="1">Imperial</option>
+              </select>
+            </div>
+          </div>
+          <button
+            type="submit"
+            target="_blank"
+            class="btn btn-primary fw-bold d-block mx-auto btn-lg"
+          >
+            Calculate
+          </button>
+        </form>
+
+        <section class="border-main mt-2" id="results">
+          <div class="row row-cols-1 row-cols-lg-3">
+            <div class="col">
+              <h1 class="mb-5">Result</h1>
+              <h3>BMI: <span id="bmi">0.0</span></h3>
+              <h3>Estimate: <span id="estimate">-</span></h3>
+            </div>
+            <div class="col">
+              <h1 class="text-center">Adults Table</h1>
+              <table
+                class="table table-sm table-warning table-bordered table-striped table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">Category</th>
+                    <th scope="col" class="text-center">BMI range</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <td scope="row">Severe Thinness</td>
+                    <td class="text-center">< 16</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Moderate Thinness</td>
+                    <td class="text-center">16 - 17</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Mild Thinness</td>
+                    <td class="text-center">17 - 18.5</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Normal</td>
+                    <td class="text-center">18.5 - 25</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Overweight</td>
+                    <td class="text-center">25 - 30</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Obese Class I</td>
+                    <td class="text-center">30 - 35</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Obese Class II</td>
+                    <td class="text-center">35 - 40</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Obese Class III</td>
+                    <td class="text-center">> 40</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col">
+              <h1 class="text-center">
+                Teens<span class="fs-5"> (age 2-20) </span>Table
+              </h1>
+              <table
+                class="table table-sm table-warning table-bordered table-striped table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">Category</th>
+                    <th scope="col" class="text-center">BMI range</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <td scope="row">Underweight</td>
+                    <td class="text-center">< 2</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Healthy weight</td>
+                    <td class="text-center">2 - 34</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">At risk of overweight</td>
+                    <td class="text-center">34 - 38</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Overweight</td>
+                    <td class="text-center">> 38</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <footer class="py-3 fixed-bottom">
-        <div class="container">
-            <div class="d-flex justify-content-between">
-                <p class="my-auto"><strong>Ilya Shelestov</strong>, SE-2207</p>
-                <p class="my-auto"><strong>Astana IT University</strong>, 2023</p>
-            </div>
+    <footer class="py-3 fixed-bottom border-top border-2">
+      <div class="container">
+        <div class="d-flex justify-content-between">
+          <p class="my-auto"><strong>Ilya Shelestov</strong>, SE-2207</p>
+          <p class="my-auto"><strong>Astana IT University</strong>, 2023</p>
         </div>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
