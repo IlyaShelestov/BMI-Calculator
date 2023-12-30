@@ -1,0 +1,29 @@
+:root {
+    --main-color: #FFFFEC;
+    --second-color: #C6A969;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+header, footer {
+    background-color: var(--second-color);
+}
+
+.border-main {
+    padding: 10px;
+    border: 10px solid var(--second-color);
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: var(--second-color);
+    border: none;
+}

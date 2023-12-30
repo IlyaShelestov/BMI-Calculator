@@ -1,0 +1,18 @@
+:root {
+    --main-color: #FFFFEC;
+    --second-color: #C6A969;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+header, footer {
+    background-color: var(--second-color);
+}

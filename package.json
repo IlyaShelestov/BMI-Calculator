@@ -1,0 +1,14 @@
+{
+  "name": "bmi_calculator",
+  "version": "1.0.0",
+  "description": "Assignment_1_WEB",
+  "main": "root.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilya Shelestov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
