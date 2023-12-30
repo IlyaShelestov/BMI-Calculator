@@ -26,7 +26,17 @@ footer {
   border-radius: 5px;
 }
 
+.border-result {
+    padding: 10px;
+    border: 6px solid var(--second-color);
+    border-radius: 5px; 
+}
+
 .btn-primary {
   background-color: var(--second-color);
   border: none;
+}
+
+.accent {
+    background-color: #f2e7c3;
 }
