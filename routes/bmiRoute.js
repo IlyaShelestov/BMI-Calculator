@@ -28,44 +28,25 @@ router.post('/', (req, res) => {
     //ESTIMATE
     let estimate = '-';
     if (age > 20) {
-        if (bmi <= 16) {
-            estimate = 'Severe Thinness';
-        } else if (bmi <= 17) {
-            estimate = 'Moderate Thinness';
-        } else if (bmi <= 18.5) {
-            estimate = 'Mild Thinness';
-        } else if (bmi <= 25) {
-            estimate = 'Normal';
-        } else if (bmi <= 30) {
-            estimate = 'Overweight';
-        } else if (bmi <= 35) {
-            estimate = 'Obese Class I';
-        } else if (bmi <= 40) {
-            estimate = 'Obese Class II';
-        } else {
-            estimate = 'Obese Class III';
-        }
+        if (bmi <= 16) estimate = 'Severe Thinness';
+        else if (bmi <= 17) estimate = 'Moderate Thinness';
+        else if (bmi <= 18.5) estimate = 'Mild Thinness';
+        else if (bmi <= 25) estimate = 'Normal';
+        else if (bmi <= 30) estimate = 'Overweight';
+        else if (bmi <= 35) estimate = 'Obese Class I';
+        else if (bmi <= 40) estimate = 'Obese Class II';
+        else estimate = 'Obese Class III';
     } else {
         if (gender === 0) {
-            if (bmi <= 19) {
-                estimate = 'Underweight';
-            } else if (bmi <= 27) {
-                estimate = 'Healthy weight';
-            } else if (bmi <= 31) {
-                estimate = 'At risk of overweight';
-            } else {
-                estimate = 'Overweight';
-            }
+            if (bmi <= 19) estimate = 'Underweight';
+            else if (bmi <= 27) estimate = 'Healthy weight';
+            else if (bmi <= 31) estimate = 'At risk of overweight';
+            else estimate = 'Overweight';
         } else {
-            if (bmi <= 17.8) {
-                estimate = 'Underweight';
-            } else if (bmi <= 26.5) {
-                estimate = 'Healthy weight';
-            } else if (bmi <= 32.5) {
-                estimate = 'At risk of overweight';
-            } else {
-                estimate = 'Overweight';
-            }
+            if (bmi <= 17.8) estimate = 'Underweight';
+            else if (bmi <= 26.5) estimate = 'Healthy weight';
+            else if (bmi <= 32.5) estimate = 'At risk of overweight';
+            else estimate = 'Overweight';
         }
     }
     console.log('BMI: ' + bmi);
