@@ -4,7 +4,7 @@
   "description": "Assignment_1_WEB",
   "main": "root.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node root.js"
   },
   "author": "Ilya Shelestov",
   "license": "ISC",
