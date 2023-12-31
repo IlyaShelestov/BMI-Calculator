@@ -25,6 +25,7 @@ router.post('/', (req, res) => {
     } else { 
         bmi = (weight / Math.pow(height, 2)) * 703;
     }
+    bmi = bmi.toFixed(2);
     //ESTIMATE
     let estimate = '-';
     if (age > 20) {
@@ -51,6 +52,8 @@ router.post('/', (req, res) => {
     }
     console.log('BMI: ' + bmi);
     console.log('Estimate: ' + estimate);
+    
+    res.json({bmi: bmi, estimate: estimate});
 })
 
 module.exports = router;
