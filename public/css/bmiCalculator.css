@@ -27,9 +27,9 @@ footer {
 }
 
 .border-result {
-    padding: 10px;
-    border: 6px solid var(--second-color);
-    border-radius: 5px; 
+  padding: 10px;
+  border: 6px solid var(--second-color);
+  border-radius: 5px;
 }
 
 .btn-primary {
@@ -38,5 +38,5 @@ footer {
 }
 
 .accent {
-    background-color: #f2e7c3;
+  background-color: #f2e7c3;
 }
