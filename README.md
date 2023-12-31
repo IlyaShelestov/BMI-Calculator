@@ -3,29 +3,29 @@
 This project serves as the first assignment for the **WEB Technologies 2** course at **Astana IT University**.
 
 ## Dependencies
-***Before installing*** this application, you should have installed **gitBash**, **node.js** and **Node Package Manager**.
+Before installing this application, ensure that you have **GitBash**, **Node.js**, and **Node Package Manager** installed on your machine.
 
 ## Installation 
 
-1. Create a *folder* where you will install this project.
-2. Open created *folder* with **GitBash**.
-3. In **GitBash** write next commands for download project:
+1. Create a *folder* where you want to install this project.
+2. Open the created *folder* with **GitBash**.
+3. Use the following commands in **GitBash** to download the project:
 ```
 git clone https://github.com/ilyaShelestov/BMI-Calculator
 cd BMI-Calculator
 ```
-4. To start server write:
+4. Start the server with:
 ```
 npm start
 ```
-5. Server runs on **port 3000**, to open project write in your browser search **localhost:3000**
+5. The server runs on **port 3000**. Open the project in your browser by navigating to **localhost:3000**.
 
-After that steps you will see **Home Page**.
+After completing these steps, you will land on the **Home Page**.
 
-To *view the project*, simply navigate to the *"Calculator"* tab, or write **localhost:3000/bmicalculator**.
+To view the project, navigate to the *"Calculator"* tab, or visit **localhost:3000/bmicalculator**.
 
 ## Additional Information
 
 The application is designed with a clean and responsive layout, incorporating **Bootstrap** for styling. Users can input their weight, height, age, choose their gender, and select the preferred units for weight and height. The BMI calculation logic is implemented on the server side using **Express.js**, ensuring accurate and efficient results.
 
-Additional packages: **body-parser**, **imperial-metric**. You can find them at *https://www.npmjs.com/*.
+Additional packages utilized: **body-parser**, **imperial-metric**. You can find them at *https://www.npmjs.com/*.
