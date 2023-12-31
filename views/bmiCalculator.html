@@ -39,7 +39,7 @@
             Body Mass Index (BMI) Calculator
           </h1>
         </div>
-        <form action="/" method="POST" class="border-main">
+        <form action="/bmicalculator" method="POST" class="border-main">
           <div class="mb-2">
             <label for="weight" class="form-label fs-4">Weight</label>
             <input
@@ -86,7 +86,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="inlineRadioOptions"
+                  name="gender"
                   id="male"
                   value="0"
                   checked
@@ -97,7 +97,7 @@
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="inlineRadioOptions"
+                  name="gender"
                   id="female"
                   value="1"
                 />
@@ -106,15 +106,14 @@
             </div>
             <div class="mb-2">
               <label for="units" class="form-label fs-4">Units</label>
-              <select id="units" class="form-select">
-                <option value="0">Metric</option>
+              <select id="units" class="form-select" name="units">
+                <option value="0" selected>Metric</option>
                 <option value="1">Imperial</option>
               </select>
             </div>
           </div>
           <button
             type="submit"
-            target="_blank"
             class="btn btn-primary fw-bold d-block mx-auto btn-lg"
           >
             Calculate
