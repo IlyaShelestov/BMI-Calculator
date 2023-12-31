@@ -38,18 +38,21 @@ router.post("/", (req, res) => {
     else if (bmi <= 30) estimate = "Overweight";
     else if (bmi <= 35) estimate = "Obese Class I";
     else if (bmi <= 40) estimate = "Obese Class II";
-    else estimate = "Obese Class III";
+    else if (bmi > 40) estimate = "Obese Class III";
+    else estimate = "-";
   } else {
     if (gender === 0) {
       if (bmi <= 19) estimate = "Underweight";
       else if (bmi <= 27) estimate = "Healthy weight";
       else if (bmi <= 31) estimate = "At risk of overweight";
-      else estimate = "Overweight";
+      else if (bmi > 31) estimate = "Overweight";
+      else estimate = "-";
     } else {
       if (bmi <= 17.8) estimate = "Underweight";
       else if (bmi <= 26.5) estimate = "Healthy weight";
       else if (bmi <= 32.5) estimate = "At risk of overweight";
-      else estimate = "Overweight";
+      else if (bmi > 32.5) estimate = "Overweight";
+      else estimate = "-";
     }
   }
   console.log("BMI: " + bmi);
