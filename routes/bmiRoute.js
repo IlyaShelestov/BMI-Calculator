@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+//package for converting inches to cm
+const IM = require("imperial-metric");
+
 const router = express.Router();
 
 router.use(bodyParser.urlencoded({ extended: true }));
@@ -12,18 +15,18 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
   console.log(req.body);
-  const weight = parseFloat(req.body.weight);
-  const height = parseFloat(req.body.height);
+  let weight = parseFloat(req.body.weight);
+  let height = parseFloat(req.body.height);
   const age = parseFloat(req.body.age);
   const gender = parseFloat(req.body.gender);
   const units = parseFloat(req.body.units);
   //CALCULATOR LOGIC
   let bmi;
-  if (units === 0) {
-    bmi = weight / Math.pow(height / 100, 2);
-  } else {
-    bmi = (weight / Math.pow(height, 2)) * 703;
+  if (units === 1) {
+    height = IM(height).from('inch').to('cm');
+    weight = weight / 2.205;
   }
+  bmi = weight / Math.pow(height / 100, 2);
   bmi = bmi.toFixed(2);
   //ESTIMATE
   let estimate = "-";
