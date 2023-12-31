@@ -41,7 +41,7 @@
         </div>
         <form action="/bmicalculator" method="POST" class="border-main">
           <div class="mb-2">
-            <label for="weight" class="form-label fs-4">Weight</label>
+            <label for="weight" class="form-label fs-4">Weight<span class="fs-6"> (kg/lbs)</span></label>
             <input
               type="number"
               class="form-control"
@@ -49,12 +49,13 @@
               name="weight"
               value="0"
               min="0"
+              step="0.1"
               oninput="validity.valid||(value='');"
               required
             />
           </div>
           <div class="mb-2">
-            <label for="height" class="form-label fs-4">Height</label>
+            <label for="height" class="form-label fs-4">Height<span class="fs-6"> (m/in)</span></label>
             <input
               type="number"
               class="form-control"
@@ -62,13 +63,14 @@
               name="height"
               value="0"
               min="0"
+              step="0.1"
               oninput="validity.valid||(value='');"
               required
             />
           </div>
           <div class="mb-2 d-flex justify-content-around">
             <div class="mb-2">
-              <label for="age" class="form-label fs-4">Age (From 2)</label>
+              <label for="age" class="form-label fs-4">Age<span class="fs-6"> (From 2)</span></label>
               <input
                 type="number"
                 class="form-control"
@@ -184,26 +186,54 @@
               >
                 <thead>
                   <tr>
-                    <th scope="col" class="text-center">Category</th>
+                    <th scope="col" class="text-center">Category (Male)</th>
                     <th scope="col" class="text-center">BMI range</th>
                   </tr>
                 </thead>
                 <tbody class="table-group-divider">
                   <tr>
                     <td scope="row">Underweight</td>
-                    <td class="text-center">< 2</td>
+                    <td class="text-center">< 19</td>
                   </tr>
                   <tr>
                     <td scope="row">Healthy weight</td>
-                    <td class="text-center">2 - 34</td>
+                    <td class="text-center">19 - 27</td>
                   </tr>
                   <tr>
                     <td scope="row">At risk of overweight</td>
-                    <td class="text-center">34 - 38</td>
+                    <td class="text-center">27 - 31</td>
                   </tr>
                   <tr>
                     <td scope="row">Overweight</td>
-                    <td class="text-center">> 38</td>
+                    <td class="text-center">> 31</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table
+                class="table table-sm table-warning table-bordered table-striped table-hover"
+              >
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-center">Category (Female)</th>
+                    <th scope="col" class="text-center">BMI range</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr>
+                    <td scope="row">Underweight</td>
+                    <td class="text-center">< 17.8</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Healthy weight</td>
+                    <td class="text-center">17.8 - 26.5</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">At risk of overweight</td>
+                    <td class="text-center">26.5 - 32.5</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">Overweight</td>
+                    <td class="text-center">> 32.5</td>
                   </tr>
                 </tbody>
               </table>
