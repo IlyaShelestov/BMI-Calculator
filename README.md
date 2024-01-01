@@ -24,6 +24,8 @@ After completing these steps, you will land on the **Home Page**.
 
 To view the project, navigate to the *"Calculator"* tab, or visit **localhost:3000/bmicalculator**.
 
+To access the BMI calculation history, either click the *"History"* button in *"Result"* section or navigate to **localhost:3000/bmicalculator/history**
+
 ## Additional Information
 
 The application is designed with a clean and responsive layout, incorporating **Bootstrap** for styling. Users can input their weight, height, age, choose their gender, and select the preferred units for weight and height. The BMI calculation logic is implemented on the server side using **Express.js**, ensuring accurate and efficient results.
