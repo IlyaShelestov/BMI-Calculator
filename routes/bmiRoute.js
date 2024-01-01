@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const IM = require("imperial-metric");
 
 const router = express.Router();
+//HISTORY ARRAY
 const bmiHistory = [];
 
 router.use(bodyParser.urlencoded({ extended: true }));
@@ -58,6 +59,8 @@ router.post("/", (req, res) => {
   }
   console.log("BMI: " + bmi);
   console.log("Estimate: " + estimate);
+
+  //SAVING TO HISTORY
   bmiHistory.push({
     weight,
     height,
@@ -72,8 +75,8 @@ router.post("/", (req, res) => {
   res.json({ bmi: bmi, estimate: estimate });
 });
 
+//HISTORY ROUTE
 router.get('/history', (req, res) => {
-  // Send the entire history array as a JSON response
   res.json({ history: bmiHistory });
 });
 
